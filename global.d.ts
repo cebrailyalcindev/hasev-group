@@ -4,6 +4,7 @@ declare module "framer-motion" {
   interface MotionProps extends OriginalMotionProps {
     className?: string;
     type?: string;
+    disabled?: boolean;
     onClick?: () => void;
   }
 }

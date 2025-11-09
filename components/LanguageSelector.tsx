@@ -57,8 +57,8 @@ export function LanguageSelector({ locale }: SelectLangProps) {
             id={LANGUAGE_SELECTOR_ID}
             aria-expanded={isOpen}
         >
-            <span className={`fi fis fi-${selectedLanguage.countryCode} inline-block w-6 h-4`} />
-            {selectedLanguage.label}
+            <span className={`fi fis fi-${selectedLanguage?.countryCode} inline-block w-6 h-4`} />
+            {selectedLanguage?.label}
             <svg
                 className="-me-1 ms-2 h-5 w-5"
                 xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +86,7 @@ export function LanguageSelector({ locale }: SelectLangProps) {
                             key={language.code}
                             onClick={() => handleChange(language)}
                             className={`${
-                                selectedLanguage.code === language.code
+                                selectedLanguage?.code === language.code
                                     ? "bg-gray-100 text-gray-900"
                                     : "text-gray-700"
                             } block px-6 py-2 text-sm text-start items-center flex gap-2 hover:bg-gray-100`}
