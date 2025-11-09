@@ -53,7 +53,7 @@ export function LanguageSelector({ locale }: SelectLangProps) {
         <button
             onClick={() => setIsOpen(!isOpen)}
             type="button"
-            className="inline-flex items-center gap-2 justify-center w-[100%] rounded-md border border-gray-300 shadow-sm px-2 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="inline-flex items-center gap-2 justify-center w-[100%] text-[#1e61ca] rounded-md border border-gray-300 shadow-sm px-2 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
             id={LANGUAGE_SELECTOR_ID}
             aria-expanded={isOpen}
         >
@@ -89,7 +89,7 @@ export function LanguageSelector({ locale }: SelectLangProps) {
                                 selectedLanguage?.code === language.code
                                     ? "bg-gray-100 text-gray-900"
                                     : "text-gray-700"
-                            } block px-6 py-2 text-sm text-start items-center flex gap-2 hover:bg-gray-100`}
+                            } block text-[#1e61ca] px-6 py-2 text-sm text-start items-center flex gap-2 hover:bg-gray-100`}
                             role="menuitem"
                         >
                             <span className={`fi fis fi-${language.countryCode} inline-block w-6 h-4`} />

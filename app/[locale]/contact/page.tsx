@@ -31,17 +31,17 @@ export default function Contact({ params }: { params: Promise<{ locale: string }
     }
     const { locale } = use(params);
     const t = translations[locale] || fr;
-    const mail = t.contact?.email || 'contact@hasev.example';
+    const mail = t.contact?.email || 'hasevgroup@gmail.com';
 
     return (
-        <motion.div initial={{y:30, opacity:0}} animate={{y:0, opacity:1}} transition={{delay:0.1, duration:0.6}} className="max-w-4xl mx-auto px-4 py-12">
+        <motion.div initial={{y:30, opacity:0}} animate={{y:0, opacity:1}} transition={{delay:0.1, duration:0.6}} className="text-[#1e61ca] max-w-4xl mx-auto px-4 py-12">
           <h1 className="text-3xl font-semibold mb-4">{t.contact?.title || 'Contact'}</h1>
           <p className="mb-4">{t.contact?.address}</p>
           <p className="mb-6">Tel: {t.contact?.phone}</p>
 
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label className="block mb-1 text-gray-700 font-medium">Nom</label>
+              <label className="block mb-1 font-medium">Nom</label>
               <input
                 type="text"
                 value={form.name}
@@ -52,7 +52,7 @@ export default function Contact({ params }: { params: Promise<{ locale: string }
             </div>
 
             <div>
-              <label className="block mb-1 text-gray-700 font-medium">Email</label>
+              <label className="block mb-1 font-medium">Email</label>
               <input
                 type="email"
                 value={form.email}
@@ -63,7 +63,7 @@ export default function Contact({ params }: { params: Promise<{ locale: string }
             </div>
 
             <div>
-              <label className="block mb-1 text-gray-700 font-medium">Message</label>
+              <label className="block mb-1 font-medium">Message</label>
               <textarea
                 value={form.message}
                 onChange={e => setForm({ ...form, message: e.target.value })}
@@ -81,7 +81,7 @@ export default function Contact({ params }: { params: Promise<{ locale: string }
               className={`w-full py-3 rounded-lg text-white font-semibold transition ${
                 status === 'loading'
                   ? 'bg-gray-400 cursor-not-allowed'
-                  : 'bg-primary hover:bg-primary/90'
+                  : 'bg-[#1e61ca] hover:bg-[#1e61ca]/90'
               }`}
             >
               {status === 'loading' ? 'Envoi en cours...' : 'Envoyer'}

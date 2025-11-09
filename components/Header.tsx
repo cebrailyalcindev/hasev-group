@@ -59,15 +59,15 @@ export default function Header({ locale }: { locale: string }) {
     >
       <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
         <Link href={`/${locale}`} className="flex items-center gap-3">
-          <img src="/logo.png" alt="Hasev Group" className="h-20 object-contain" />
+          <img src="/logo.png" alt="Hasev Group" className="h-[6em] object-contain" />
         </Link>
 
         {/* Navigation Desktop */}
-        <nav className="relative hidden md:flex gap-6 items-center">
-          <Link href={`/${locale}`} className="text-sm font-medium hover:text-accent transition-colors">Accueil</Link>
-          <Link href={`/${locale}/about`} className="whitespace-nowrap text-sm font-medium hover:text-accent transition-colors">À propos</Link>
-          <Link href={`/${locale}/services`} className="text-sm font-medium hover:text-accent transition-colors">Services</Link>
-          <Link href={`/${locale}/contact`} className="text-sm font-medium hover:text-accent transition-colors">Contact</Link>
+        <nav className="text-[#1e61ca] relative hidden md:flex gap-6 items-center">
+          <Link href={`/${locale}`} className="text-sm font-medium hover:text-accent">Accueil</Link>
+          <Link href={`/${locale}/about`} className="whitespace-nowrap text-sm font-medium hover:text-accent">À propos</Link>
+          <Link href={`/${locale}/services`} className="text-sm font-medium hover:text-accent">Services</Link>
+          <Link href={`/${locale}/contact`} className="text-sm font-medium hover:text-accent">Contact</Link>
           <LanguageSelector locale={locale} />
         </nav>
 
@@ -132,7 +132,7 @@ export default function Header({ locale }: { locale: string }) {
                 </button>
               </div>
 
-              <nav className="bg-white px-4 py-5 space-y-2 text-gray-700 border-b">
+              <nav className="bg-white px-4 py-5 space-y-2 text-[#1e61ca] border-b">
                 <NavLink onClick={() => setOpen(false)} href={`/${locale}`}>Accueil</NavLink>
                 <NavLink onClick={() => setOpen(false)} href={`/${locale}/about`}>À propos</NavLink>
                 <NavLink onClick={() => setOpen(false)} href={`/${locale}/services`}>Services</NavLink>

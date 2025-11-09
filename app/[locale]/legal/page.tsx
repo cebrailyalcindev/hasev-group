@@ -13,7 +13,7 @@ export default function Legal({ params }: { params: Promise<{ locale: string }> 
   const t = translations[locale] || fr;
 
   return (
-    <motion.div initial={{y:30, opacity:0}} animate={{y:0, opacity:1}} transition={{delay:0.1, duration:0.6}} className="max-w-4xl mx-auto px-4 py-12">
+    <motion.div initial={{y:30, opacity:0}} animate={{y:0, opacity:1}} transition={{delay:0.1, duration:0.6}} className="text-[#1e61ca] max-w-4xl mx-auto px-4 py-12">
       <h1 className="text-2xl font-semibold mb-4">{t.legal?.title || 'Legal notice'}</h1>
       <p>{t.legal?.p1}</p>
       <div className="mt-4 text-sm">

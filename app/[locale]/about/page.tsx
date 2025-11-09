@@ -13,7 +13,7 @@ export default function About({ params }: { params: Promise<{ locale: string }> 
   const t = translations[locale] || fr;
 
   return (
-    <motion.div initial={{y:30, opacity:0}} animate={{y:0, opacity:1}} transition={{delay:0.1, duration:0.6}} className="max-w-5xl mx-auto px-4 py-12">
+    <motion.div initial={{y:30, opacity:0}} animate={{y:0, opacity:1}} transition={{delay:0.1, duration:0.6}} className="text-[#1e61ca] max-w-6xl mx-auto px-4 py-12">
       <h1 className="text-3xl font-semibold mb-4">{t.about?.title || 'About'}</h1>
       <p className="mb-4">{t.about?.p1}</p>
 
