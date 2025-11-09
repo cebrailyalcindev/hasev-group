@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Dienstleistungen",
+    "contact": "Kontakt",
+    "legal": "Impressum"
+  },
+  "hero": {
+    "title": "Ihr Import‑Export Partner in Brüssel",
+    "subtitle": "Wir optimieren globale Lieferketten für Geschwindigkeit, Sicherheit und Compliance.",
+    "cta": "Kontakt aufnehmen"
+  },
+  "about": {
+    "title": "Über Hasev Group",
+    "p1": "Hasev Group unterstützt seit über 10 Jahren Unternehmen bei internationalen Aktivitäten. Wir bieten maßgeschneiderte Lösungen von Transport bis Zollabfertigung."
+  },
+  "services": {
+    "title": "Unsere Dienstleistungen",
+    "p1": "Umfassende Import/Export-, Logistik- und Lagerlösungen für europäische Unternehmen."
+  },
+  "services_list": {
+    "s1": "Internationales Sourcing & Import",
+    "s2": "Export & Distribution",
+    "s3": "See- & Luftfracht",
+    "s4": "Zollabfertigung & Compliance",
+    "s5": "Lagerung & Bestandsverwaltung",
+    "s6": "Beratung im internationalen Handel"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "email": "contact@hasev.example",
+    "address": "Rue de l'Export 10, 1000 Brüssel, Belgien",
+    "phone": "+32 2 123 45 67"
+  },
+  "legal": {
+    "title": "Impressum",
+    "p1": "Rechtliche Informationen: Firmenname, Registrationsnummer, Sitz und Kontaktdaten."
+  }
+}

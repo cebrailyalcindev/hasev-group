@@ -1,0 +1,40 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Over",
+    "services": "Diensten",
+    "contact": "Contact",
+    "legal": "Juridische info"
+  },
+  "hero": {
+    "title": "Uw import‑export partner in Brussel",
+    "subtitle": "Wij stroomlijnen wereldwijde toeleveringsketens voor snelheid, veiligheid en naleving.",
+    "cta": "Neem contact op"
+  },
+  "about": {
+    "title": "Over Hasev Group",
+    "p1": "Hasev Group ondersteunt al meer dan 10 jaar bedrijven bij internationale operaties. Wij bieden oplossingen op maat, van transport tot douaneafhandeling."
+  },
+  "services": {
+    "title": "Onze diensten",
+    "p1": "Volledige import/export, logistiek en opslagoplossingen voor Europese bedrijven."
+  },
+  "services_list": {
+    "s1": "Internationaal sourcen & import",
+    "s2": "Export & distributie",
+    "s3": "Zee- & luchtvracht",
+    "s4": "Douane & naleving",
+    "s5": "Opslag & voorraadbeheer",
+    "s6": "Advies internationaal zakendoen"
+  },
+  "contact": {
+    "title": "Neem contact op",
+    "email": "contact@hasev.example",
+    "address": "Rue de l'Export 10, 1000 Brussel, België",
+    "phone": "+32 2 123 45 67"
+  },
+  "legal": {
+    "title": "Juridische info",
+    "p1": "Juridische informatie: bedrijfsnaam, registratienummer, vestigingsadres en contactgegevens."
+  }
+}
