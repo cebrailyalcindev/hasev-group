@@ -35,13 +35,13 @@ export default function Contact({ params }: { params: Promise<{ locale: string }
 
     return (
         <motion.div initial={{y:30, opacity:0}} animate={{y:0, opacity:1}} transition={{delay:0.1, duration:0.6}} className="text-[#1e61ca] max-w-4xl mx-auto px-4 py-12">
-          <h1 className="text-3xl font-semibold mb-4">{t.contact?.title || 'Contact'}</h1>
+          <h1 className="text-3xl font-semibold mb-4">{t.contact?.title}</h1>
           <p className="mb-4">{t.contact?.address}</p>
-          <p className="mb-6">Tel: {t.contact?.phone}</p>
+          <p className="mb-6">{t.contact?.phone}</p>
 
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label className="block mb-1 font-medium">Nom</label>
+              <label className="block mb-1 font-medium">{t.contact?.name_field}</label>
               <input
                 type="text"
                 value={form.name}
@@ -52,7 +52,7 @@ export default function Contact({ params }: { params: Promise<{ locale: string }
             </div>
 
             <div>
-              <label className="block mb-1 font-medium">Email</label>
+              <label className="block mb-1 font-medium">{t.contact?.email_field}</label>
               <input
                 type="email"
                 value={form.email}
@@ -63,7 +63,7 @@ export default function Contact({ params }: { params: Promise<{ locale: string }
             </div>
 
             <div>
-              <label className="block mb-1 font-medium">Message</label>
+              <label className="block mb-1 font-medium">{t.contact?.message_field}</label>
               <textarea
                 value={form.message}
                 onChange={e => setForm({ ...form, message: e.target.value })}
@@ -84,19 +84,19 @@ export default function Contact({ params }: { params: Promise<{ locale: string }
                   : 'bg-[#1e61ca] hover:bg-[#1e61ca]/90'
               }`}
             >
-              {status === 'loading' ? 'Envoi en cours...' : 'Envoyer'}
+              {status === 'loading' ? t.contact?.email_sending : t.contact?.email_send}
             </motion.button>
 
             {status === 'success' && (
-              <p className="text-green-600 text-center mt-3">✅ Message envoyé avec succès.</p>
+              <p className="text-green-600 text-center mt-3">{t.contact?.email_sent}</p>
             )}
             {status === 'error' && (
-              <p className="text-red-600 text-center mt-3">❌ Une erreur est survenue, veuillez réessayer.</p>
+              <p className="text-red-600 text-center mt-3">{t.contact?.email_sending_error}</p>
             )}
           </form>
 
           <div className="mt-8">
-            <p className="text-sm">Ou par email : <a href={`mailto:${mail}`} className="underline">{mail}</a></p>
+            <p className="text-sm">{t.contact?.or_using_email} : <a href={`mailto:${mail}`} className="underline">{mail}</a></p>
           </div>
         </motion.div>
     );

@@ -11,7 +11,7 @@ export async function POST(req: Request) {
     }
 
     await resend.emails.send({
-      from: 'onboarding@resend.dev', // à remplacer plus tard par ton domaine
+      from: 'Hasev Group <contact@hasevgroup.be>', // à remplacer plus tard par ton domaine
       to: [process.env.RESEND_TO!],
       subject: 'Nouveau message depuis le site Hasev Group',
       html: `

@@ -29,12 +29,31 @@
   },
   "contact": {
     "title": "Contactez‑nous",
-    "email": "hasevgroup@gmail.com",
-    "address": "Rue de l'Export 10, 1000 Bruxelles, Belgique",
-    "phone": "+32 477 65 01 53"
+    "email": "contact@hasevgroup.be",
+    "address": "Rue Esseghem 116, 1090 Bruxelles, Belgique",
+    "phone": "Tél. : +32 477 65 01 53",
+    "tva": "N° TVA : BE1027834071",
+    "name_field": "Nom",
+    "email_field": "Email",
+    "message_field": "Message",
+    "email_sending": "Envoi en cours...",
+    "email_send": "Envoyer",
+    "email_sent": "✅ Message envoyé avec succès.",
+    "email_sending_error": "❌ Une erreur est survenue, veuillez réessayer.",
+    "or_using_email": "Ou par email"
   },
   "legal": {
     "title": "Mentions légales",
     "p1": "Informations légales de l'entreprise. Raison sociale, numéro d'entreprise, siège social et informations de contact."
+  },
+  "footer": {
+    "rights": "Hasev Group — Tous droits réservés.",
+    "phone": "+32 477 65 01 53"
+  },
+  "header": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "contact": "Contact"
   }
 }

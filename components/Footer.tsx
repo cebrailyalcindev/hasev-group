@@ -25,25 +25,16 @@ export default function Footer({ locale }: { locale: string }) {
       <div className="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
         <div>
           <img src="/logo_white.png" alt="Hasev Group" className="h-10 mb-3" />
-          <p className="text-sm opacity-80 mb-2">Rue de l'Export 10, 1000 Bruxelles</p>
+          <div className="flex flex-col gap-2">
+          <p className="text-sm opacity-80">{t.contact?.address}</p>
           <a href={`mailto:${mail}`} className="text-sm opacity-80 underline">{mail}</a>
-        </div>
-
-        <div className="flex gap-4">
-          <a href="#" className="hover:text-gold transition-colors">
-            <Facebook className="w-5 h-5" />
-          </a>
-          <a href="#" className="hover:text-gold transition-colors">
-            <Linkedin className="w-5 h-5" />
-          </a>
-          <a href={`mailto:${mail}`} className="hover:text-gold transition-colors">
-            <Mail className="w-5 h-5" />
-          </a>
+          <p className="text-sm opacity-80">{t.contact?.tva}</p>
+          </div>
         </div>
       </div>
 
       <div className="bg-[#0d3068]/80 text-center text-xs py-3 border-t border-white/10">
-        © {year} Hasev Group — Tous droits réservés.
+        © {year} {t.footer?.rights}
       </div>
     </motion.footer>
   );

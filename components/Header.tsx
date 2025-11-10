@@ -3,6 +3,12 @@ import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LanguageSelector } from "./LanguageSelector";
+import fr from '../locales/fr/common.json';
+import en from '../locales/en/common.json';
+import nl from '../locales/nl/common.json';
+import de from '../locales/de/common.json';
+
+const translations: Record<string, any> = { fr, en, nl, de };
 
 const NavLink = ({ href, children, onClick }: { href: string; children: React.ReactNode; onClick: () => void }) => (
   <Link
@@ -18,6 +24,7 @@ export default function Header({ locale }: { locale: string }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState<boolean>(true);
+  const t = translations[locale] || fr;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -64,10 +71,10 @@ export default function Header({ locale }: { locale: string }) {
 
         {/* Navigation Desktop */}
         <nav className="text-[#1e61ca] relative hidden md:flex gap-6 items-center">
-          <Link href={`/${locale}`} className="text-sm font-medium hover:text-accent">Accueil</Link>
-          <Link href={`/${locale}/about`} className="whitespace-nowrap text-sm font-medium hover:text-accent">À propos</Link>
-          <Link href={`/${locale}/services`} className="text-sm font-medium hover:text-accent">Services</Link>
-          <Link href={`/${locale}/contact`} className="text-sm font-medium hover:text-accent">Contact</Link>
+          <Link href={`/${locale}`} className="text-sm font-medium hover:text-accent">{t.header?.home}</Link>
+          <Link href={`/${locale}/about`} className="whitespace-nowrap text-sm font-medium hover:text-accent">{t.header?.about}</Link>
+          <Link href={`/${locale}/services`} className="text-sm font-medium hover:text-accent">{t.header?.services}</Link>
+          <Link href={`/${locale}/contact`} className="text-sm font-medium hover:text-accent">{t.header?.contact}</Link>
           <LanguageSelector locale={locale} />
         </nav>
 
@@ -133,10 +140,10 @@ export default function Header({ locale }: { locale: string }) {
               </div>
 
               <nav className="bg-white px-4 py-5 space-y-2 text-[#1e61ca] border-b">
-                <NavLink onClick={() => setOpen(false)} href={`/${locale}`}>Accueil</NavLink>
-                <NavLink onClick={() => setOpen(false)} href={`/${locale}/about`}>À propos</NavLink>
-                <NavLink onClick={() => setOpen(false)} href={`/${locale}/services`}>Services</NavLink>
-                <NavLink onClick={() => setOpen(false)} href={`/${locale}/contact`}>Contact</NavLink>
+                <NavLink onClick={() => setOpen(false)} href={`/${locale}`}>{t.header?.home}</NavLink>
+                <NavLink onClick={() => setOpen(false)} href={`/${locale}/about`}>{t.header?.about}</NavLink>
+                <NavLink onClick={() => setOpen(false)} href={`/${locale}/services`}>{t.header?.services}</NavLink>
+                <NavLink onClick={() => setOpen(false)} href={`/${locale}/contact`}>{t.header?.contact}</NavLink>
               </nav>
             </motion.div>
           </>
