@@ -1,11 +1,9 @@
-import type { DefaultSeoProps } from 'next-seo';
-
 const baseUrl = 'https://hasev-group.vercel.app';
 
 export const locales = ['fr', 'en', 'nl', 'de'] as const;
 export type Locale = typeof locales[number];
 
-export const seoConfigByLocale: Record<Locale, DefaultSeoProps> = {
+export const seoConfigByLocale: Record<Locale, any> = {
   fr: {
     titleTemplate: '%s | Hasev Group',
     defaultTitle: 'Hasev Group - Import Export à Bruxelles',

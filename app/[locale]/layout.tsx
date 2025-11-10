@@ -36,7 +36,7 @@ export default async function LocaleLayout({ children, params }: { children: Rea
                   <meta property="og:locale" content={seoConfig.openGraph.locale} />
                   <meta property="og:url" content={seoConfig.openGraph.url} />
                   <meta property="og:site_name" content={seoConfig.openGraph.site_name} />
-                  {seoConfig.openGraph.images?.map((img, idx) => (
+                  {seoConfig.openGraph.images?.map((img: {url: string}, idx: number) => (
                     <meta key={idx} property="og:image" content={img.url} />
                   ))}
                 </>
