@@ -36,5 +36,11 @@
   "legal": {
     "title": "Legal notice",
     "p1": "Company legal information: company name, registration number, registered address and contact info."
+  },
+  "header": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact"
   }
 }
