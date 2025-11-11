@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { locales } from '@/../../seo.config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.hasev-group.be';
+  const baseUrl = 'https://www.hasevgroup.be';
   const routes = ['', '/about', '/contact'];
 
   return locales.flatMap((locale) =>
