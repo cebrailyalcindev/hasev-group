@@ -7,35 +7,66 @@
     "legal": "Legal notice"
   },
   "hero": {
-    "title": "Your import‑export partner in Brussels",
-    "subtitle": "We streamline global supply chains to deliver speed, safety and compliance.",
-    "cta": "Get in touch"
+    "title": "Your logistics partner in Belgium and beyond",
+    "subtitle": "At Hasev Group, we put our logistics expertise at the service of your ambitions. Based in Belgium, we ensure fast, reliable national and international transport of your goods.",
+    "subtitle_2": "Our mission is simple: to provide a complete logistics solution tailored to your needs and deadlines. With a modern fleet, an experienced team and optimized transport management, we guarantee accurate tracking and safe delivery across Europe and beyond.",
+    "cta": "Contact us",
+    "why_us": "Why choose Hasev Group?",
+    "why_us_p1": "Responsiveness and flexibility to handle all your urgent needs.",
+    "why_us_p2": "A reliable and efficient logistics network throughout Europe.",
+    "why_us_p3": "A constant commitment to quality, safety and customer satisfaction.",
+    "why_us_p4": "At Hasev Group, every delivery is a kept promise: professional, punctual and transparent service."
   },
   "about": {
-    "title": "About Hasev Group",
-    "p1": "Hasev Group has been supporting businesses with international operations for over 10 years. We provide tailored solutions from transport to customs clearance."
+    "title": "Who are we?",
+    "title_2": "Our vision",
+    "title_3": "Our commitments",
+    "p1": "Founded in Brussels, Hasev Group is an import-export company specializing in connecting suppliers, distributors and businesses around the world.\nOur mission is to simplify international trade by offering customized, transparent and high-performance solutions.",
+    "p2": "We believe that effective global trade is built on trust, proximity and quality partnerships.",
+    "p3": "To become a key player in responsible international trade, where performance and sustainability go hand in hand.",
+    "p4": "We are committed to promoting greener logistics and supporting fair business relationships.",
+    "opt1": "Personalized support at every step",
+    "opt2": "Expertise in European markets",
+    "opt3": "Rigorous management of logistics and customs flows",
+    "opt4": "Smooth and responsive communication"
   },
   "services": {
     "title": "Our services",
-    "p1": "Comprehensive import/export, logistics and warehousing solutions tailored for European businesses."
+    "subtitle": "Comprehensive import/export and logistics solutions.",
+    "p1": "Complete solutions for import, export, logistics and warehousing tailored to European businesses."
   },
   "services_list": {
-    "s1": "International sourcing & import",
-    "s2": "Export & distribution",
-    "s3": "Sea & air freight",
-    "s4": "Customs clearance & compliance",
-    "s5": "Warehousing & inventory management",
-    "s6": "International trade advisory"
+    "s1": "National and international transport",
+    "s1_content": "Fast and secure delivery of your goods to any destination.",
+    "s2": "Tailor-made logistics",
+    "s2_content": "Planning, flow management, warehousing and distribution customized to your needs.",
+    "s3": "Tracking and traceability",
+    "s3_content": "Embedded technology providing full visibility over your shipments."
   },
   "contact": {
     "title": "Contact us",
-    "email": "hasevgroup@gmail.com",
-    "address": "Rue de l'Export 10, 1000 Brussels, Belgium",
-    "phone": "+32 477 65 01 53"
+    "contact_info": "Contact information",
+    "description": "Do you have a question, project or partnership request?\nOur team is ready to listen and assist you with your needs.",
+    "email": "contact@hasevgroup.be",
+    "address": "Address: Rue Esseghem 116, 1090 Brussels, Belgium",
+    "phone": "Tel:",
+    "tva": "VAT No.: BE1027834071",
+    "name_field": "Name",
+    "email_field": "Email",
+    "message_field": "Message",
+    "email_sending": "Sending...",
+    "email_send": "Send",
+    "email_sent": "✅ Message sent successfully.",
+    "email_sending_error": "❌ An error occurred, please try again.",
+    "or_using_email": "Email"
   },
   "legal": {
     "title": "Legal notice",
-    "p1": "Company legal information: company name, registration number, registered address and contact info."
+    "p1": "Company legal information. Business name, registration number, registered office and contact details."
+  },
+  "footer": {
+    "rights": "Hasev Group — All rights reserved.",
+    "phone": "+32 477 65 01 53"
   },
   "header": {
     "home": "Home",

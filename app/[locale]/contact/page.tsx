@@ -36,12 +36,11 @@ export default function Contact({ params }: { params: Promise<{ locale: string }
     return (
         <motion.div initial={{y:30, opacity:0}} animate={{y:0, opacity:1}} transition={{delay:0.1, duration:0.6}} className="text-[#1e61ca] max-w-4xl mx-auto px-4 py-12">
           <h1 className="text-3xl font-semibold mb-4">{t.contact?.title}</h1>
-          <p className="mb-4">{t.contact?.address}</p>
-          <p className="mb-6">{t.contact?.phone}</p>
+          <p className="text-lg mb-6">{t.contact?.description}</p>
 
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label className="block mb-1 font-medium">{t.contact?.name_field}</label>
+              <label className="block mb-1 font-medium">{t.contact?.name_field} *</label>
               <input
                 type="text"
                 value={form.name}
@@ -52,7 +51,7 @@ export default function Contact({ params }: { params: Promise<{ locale: string }
             </div>
 
             <div>
-              <label className="block mb-1 font-medium">{t.contact?.email_field}</label>
+              <label className="block mb-1 font-medium">{t.contact?.email_field} *</label>
               <input
                 type="email"
                 value={form.email}
@@ -63,7 +62,7 @@ export default function Contact({ params }: { params: Promise<{ locale: string }
             </div>
 
             <div>
-              <label className="block mb-1 font-medium">{t.contact?.message_field}</label>
+              <label className="block mb-1 font-medium">{t.contact?.message_field} *</label>
               <textarea
                 value={form.message}
                 onChange={e => setForm({ ...form, message: e.target.value })}
@@ -96,7 +95,10 @@ export default function Contact({ params }: { params: Promise<{ locale: string }
           </form>
 
           <div className="mt-8">
-            <p className="text-sm">{t.contact?.or_using_email} : <a href={`mailto:${mail}`} className="underline">{mail}</a></p>
+            <h2 className="text-2xl font-semibold mb-4">{t.contact?.contact_info}</h2>
+            <p className="mb-4">{t.contact?.address}</p>
+            <p className="mb-4">{t.contact?.phone}<a href={`tel:${t.footer?.phone}`} className="underline">{t.footer?.phone}</a></p>
+            <p>{t.contact?.or_using_email} : <a href={`mailto:${mail}`} className="underline">{mail}</a></p>
           </div>
         </motion.div>
     );

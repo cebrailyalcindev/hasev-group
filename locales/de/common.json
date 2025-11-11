@@ -2,39 +2,76 @@
   "nav": {
     "home": "Startseite",
     "about": "Über uns",
-    "services": "Dienstleistungen",
+    "services": "Leistungen",
     "contact": "Kontakt",
-    "legal": "Impressum"
+    "legal": "Rechtliche Hinweise"
   },
   "hero": {
-    "title": "Ihr Import‑Export Partner in Brüssel",
-    "subtitle": "Wir optimieren globale Lieferketten für Geschwindigkeit, Sicherheit und Compliance.",
-    "cta": "Kontakt aufnehmen"
+    "title": "Ihr Logistikpartner in Belgien und international",
+    "subtitle": "Bei Hasev Group stellen wir unsere Logistikkompetenz in den Dienst Ihrer Ziele. Mit Sitz in Belgien gewährleisten wir den nationalen und internationalen Transport Ihrer Waren – schnell, sicher und zuverlässig.",
+    "subtitle_2": "Unsere Mission ist einfach: eine vollständige Logistiklösung zu bieten, die Ihren Bedürfnissen und Fristen entspricht. Mit einer modernen Fahrzeugflotte, einem erfahrenen Team und optimiertem Transportmanagement garantieren wir präzises Tracking und sichere Lieferung in ganz Europa und darüber hinaus.",
+    "cta": "Kontaktieren Sie uns",
+    "why_us": "Warum Hasev Group?",
+    "why_us_p1": "Reaktionsfähigkeit und Flexibilität für dringende Anforderungen.",
+    "why_us_p2": "Ein zuverlässiges und leistungsstarkes Logistiknetz in ganz Europa.",
+    "why_us_p3": "Stetiges Engagement für Qualität, Sicherheit und Kundenzufriedenheit.",
+    "why_us_p4": "Bei Hasev Group ist jede Lieferung ein gehaltenes Versprechen: professionell, pünktlich und transparent."
   },
   "about": {
-    "title": "Über Hasev Group",
-    "p1": "Hasev Group unterstützt seit über 10 Jahren Unternehmen bei internationalen Aktivitäten. Wir bieten maßgeschneiderte Lösungen von Transport bis Zollabfertigung."
+    "title": "Wer sind wir?",
+    "title_2": "Unsere Vision",
+    "title_3": "Unsere Verpflichtungen",
+    "p1": "Die in Brüssel gegründete Hasev Group ist ein Im- und Exportunternehmen, das Lieferanten, Händler und Unternehmen weltweit miteinander verbindet.\nUnsere Mission ist es, den internationalen Handel durch maßgeschneiderte, transparente und effiziente Lösungen zu vereinfachen.",
+    "p2": "Wir glauben, dass erfolgreicher Welthandel auf Vertrauen, Nähe und qualitativ hochwertigen Partnerschaften basiert.",
+    "p3": "Ein führender Akteur im verantwortungsvollen internationalen Handel werden, in dem Leistung und Nachhaltigkeit Hand in Hand gehen.",
+    "p4": "Wir setzen uns für umweltfreundlichere Logistik und faire Handelsbeziehungen ein.",
+    "opt1": "Persönliche Betreuung in jeder Phase",
+    "opt2": "Fachwissen über europäische Märkte",
+    "opt3": "Sorgfältiges Management von Logistik- und Zollprozessen",
+    "opt4": "Reibungslose und reaktionsschnelle Kommunikation"
   },
   "services": {
-    "title": "Unsere Dienstleistungen",
-    "p1": "Umfassende Import/Export-, Logistik- und Lagerlösungen für europäische Unternehmen."
+    "title": "Unsere Leistungen",
+    "subtitle": "Umfassende Lösungen für Im- und Export sowie Logistik.",
+    "p1": "Komplette Lösungen für Import, Export, Logistik und Lagerung für europäische Unternehmen."
   },
   "services_list": {
-    "s1": "Internationales Sourcing & Import",
-    "s2": "Export & Distribution",
-    "s3": "See- & Luftfracht",
-    "s4": "Zollabfertigung & Compliance",
-    "s5": "Lagerung & Bestandsverwaltung",
-    "s6": "Beratung im internationalen Handel"
+    "s1": "Nationaler und internationaler Transport",
+    "s1_content": "Schneller und sicherer Versand Ihrer Waren an jedes Ziel.",
+    "s2": "Maßgeschneiderte Logistik",
+    "s2_content": "Planung, Flussmanagement, Lagerung und Vertrieb nach Ihren Bedürfnissen.",
+    "s3": "Verfolgung und Nachverfolgbarkeit",
+    "s3_content": "Integrierte Technologie für volle Transparenz Ihrer Sendungen."
   },
   "contact": {
     "title": "Kontaktieren Sie uns",
-    "email": "hasevgroup@gmail.com",
-    "address": "Rue de l'Export 10, 1000 Brüssel, Belgien",
-    "phone": "+32 477 65 01 53"
+    "contact_info": "Kontaktdaten",
+    "description": "Haben Sie eine Frage, ein Projekt oder ein Partnerschaftsanliegen?\nUnser Team steht Ihnen zur Verfügung, um Sie zu unterstützen.",
+    "email": "contact@hasevgroup.be",
+    "address": "Adresse: Rue Esseghem 116, 1090 Brüssel, Belgien",
+    "phone": "Tel.:",
+    "tva": "USt-IdNr.: BE1027834071",
+    "name_field": "Name",
+    "email_field": "E-Mail",
+    "message_field": "Nachricht",
+    "email_sending": "Wird gesendet...",
+    "email_send": "Senden",
+    "email_sent": "✅ Nachricht erfolgreich gesendet.",
+    "email_sending_error": "❌ Ein Fehler ist aufgetreten, bitte versuchen Sie es erneut.",
+    "or_using_email": "E-Mail"
   },
   "legal": {
-    "title": "Impressum",
-    "p1": "Rechtliche Informationen: Firmenname, Registrationsnummer, Sitz und Kontaktdaten."
+    "title": "Rechtliche Hinweise",
+    "p1": "Gesetzliche Informationen des Unternehmens: Name, Registrierungsnummer, Sitz und Kontaktdaten."
+  },
+  "footer": {
+    "rights": "Hasev Group — Alle Rechte vorbehalten.",
+    "phone": "+32 477 65 01 53"
+  },
+  "header": {
+    "home": "Startseite",
+    "about": "Über uns",
+    "services": "Leistungen",
+    "contact": "Kontakt"
   }
 }

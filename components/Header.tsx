@@ -73,7 +73,6 @@ export default function Header({ locale }: { locale: string }) {
         <nav className="text-[#1e61ca] relative hidden md:flex gap-6 items-center">
           <Link href={`/${locale}`} className="text-sm font-medium hover:text-accent">{t.header?.home}</Link>
           <Link href={`/${locale}/about`} className="whitespace-nowrap text-sm font-medium hover:text-accent">{t.header?.about}</Link>
-          <Link href={`/${locale}/services`} className="text-sm font-medium hover:text-accent">{t.header?.services}</Link>
           <Link href={`/${locale}/contact`} className="text-sm font-medium hover:text-accent">{t.header?.contact}</Link>
           <LanguageSelector locale={locale} />
         </nav>
@@ -142,7 +141,6 @@ export default function Header({ locale }: { locale: string }) {
               <nav className="bg-white px-4 py-5 space-y-2 text-[#1e61ca] border-b">
                 <NavLink onClick={() => setOpen(false)} href={`/${locale}`}>{t.header?.home}</NavLink>
                 <NavLink onClick={() => setOpen(false)} href={`/${locale}/about`}>{t.header?.about}</NavLink>
-                <NavLink onClick={() => setOpen(false)} href={`/${locale}/services`}>{t.header?.services}</NavLink>
                 <NavLink onClick={() => setOpen(false)} href={`/${locale}/contact`}>{t.header?.contact}</NavLink>
               </nav>
             </motion.div>

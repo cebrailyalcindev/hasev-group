@@ -14,17 +14,19 @@ export default function About({ params }: { params: Promise<{ locale: string }> 
 
   return (
     <motion.div initial={{y:30, opacity:0}} animate={{y:0, opacity:1}} transition={{delay:0.1, duration:0.6}} className="text-[#1e61ca] max-w-6xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-semibold mb-4">{t.about?.title || 'About'}</h1>
+      <h1 className="text-3xl font-semibold mb-4">{t.about?.title}</h1>
       <p className="mb-4">{t.about?.p1}</p>
-
-      <div className="grid md:grid-cols-3 gap-6 mt-8">
-        <div className="col-span-2">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus at arcu vitae purus volutpat pharetra. Integer at neque nec nibh cursus volutpat.</p>
-        </div>
-        <motion.div initial={{opacity:0}} animate={{opacity:1}} transition={{delay:0.4}}>
-          <img src="https://picsum.photos/400/300?random=5" alt="team" className="w-full h-48 object-cover rounded" />
-        </motion.div>
-      </div>
+      <p className="mb-8">{t.about?.p2}</p>
+      <h1 className="text-3xl font-semibold mb-4">{t.about?.title_2}</h1>
+      <p className="mb-4">{t.about?.p3}</p>
+      <p className="mb-8">{t.about?.p4}</p>
+      <h1 className="text-3xl font-semibold mb-4">{t.about?.title_3}</h1>
+      <ul className="list-disc pl-6 space-y-3 text-[#1e61ca] marker:text-[#1e61ca] marker:text-xl marker:align-middle">
+        <li>{t.about?.opt1}</li>
+        <li>{t.about?.opt2}</li>
+        <li>{t.about?.opt3}</li>
+        <li>{t.about?.opt4}</li>
+      </ul>
     </motion.div>
   );
 }

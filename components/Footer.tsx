@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Facebook, Linkedin, Mail } from 'lucide-react';
+import { Phone, MapPin, Mail } from 'lucide-react';
 import fr from '../locales/fr/common.json';
 import en from '../locales/en/common.json';
 import nl from '../locales/nl/common.json';
@@ -26,9 +26,19 @@ export default function Footer({ locale }: { locale: string }) {
         <div>
           <img src="/logo_white.png" alt="Hasev Group" className="h-10 mb-3" />
           <div className="flex flex-col gap-2">
-          <p className="text-sm opacity-80">{t.contact?.address}</p>
-          <a href={`mailto:${mail}`} className="text-sm opacity-80 underline">{mail}</a>
-          <p className="text-sm opacity-80">{t.contact?.tva}</p>
+            <div className="flex gap-2 items-center">
+                <MapPin/>
+                <p className="text-sm opacity-80">{t.contact?.address}</p>
+            </div>
+            <div className="flex gap-2 items-center">
+                <Phone/>
+                <a href={`tel:${t.footer?.phone}`} className="underline">{t.footer?.phone}</a>
+            </div>
+            <div className="flex gap-2 items-center">
+                <Mail/>
+                <a href={`mailto:${mail}`} className="text-sm opacity-80 underline">{mail}</a>
+            </div>
+            <p className="text-sm opacity-80">{t.contact?.tva}</p>
           </div>
         </div>
       </div>

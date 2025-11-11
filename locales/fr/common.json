@@ -7,31 +7,49 @@
     "legal": "Mentions légales"
   },
   "hero": {
-    "title": "Votre partenaire en import‑export à Bruxelles",
-    "subtitle": "Nous synchronisons la chaîne logistique mondiale pour vous apporter rapidité, sécurité et conformité.",
-    "cta": "Contactez‑nous"
+    "title": "Votre partenaire logistique en Belgique et à l’international",
+    "subtitle": "Chez Hasev Group, nous mettons notre expertise logistique au service de vos ambitions. Basés en Belgique, nous assurons le transport national et international de vos marchandises avec rigueur, rapidité et fiabilité.",
+    "subtitle_2": "Notre mission est simple : vous offrir une solution logistique complète, adaptée à vos besoins et à vos délais. Grâce à une flotte moderne, une équipe expérimentée et une gestion de transport optimisée, nous garantissons un suivi précis et une livraison en toute sécurité, partout en Europe et au-delà.",
+    "cta": "Contactez‑nous",
+    "why_us": "Pourquoi choisir Hasev Group ?",
+    "why_us_p1": "Réactivité et flexibilité pour répondre à toutes vos urgences.",
+    "why_us_p2": "Un réseau logistique fiable et performant à travers l’Europe.",
+    "why_us_p3": "Un engagement constant pour la qualité, la sécurité et la satisfaction client.",
+    "why_us_p4": "Chez Hasev Group, chaque trajet est une promesse tenue : celle d’un service professionnel, ponctuel et transparent."
   },
   "about": {
-    "title": "À propos de Hasev Group",
-    "p1": "Hasev Group accompagne depuis plus de 10 ans des entreprises dans leurs opérations internationales. Nous offrons des solutions sur mesure, du transport au dédouanement."
+    "title": "Qui sommes-nous ?",
+    "title_2": "Notre vision",
+    "title_3": "Nos engagements",
+    "p1": "Fondée à Bruxelles, Hasev Group est une société d’import-export spécialisée dans la mise en relation de fournisseurs, distributeurs et entreprises à travers le monde.\nNotre mission est de simplifier les échanges internationaux en offrant des solutions sur mesure, transparentes et performantes.",
+    "p2": "Nous croyons qu’un commerce mondial efficace repose sur la confiance, la proximité et la qualité des partenariats.",
+    "p3": "Devenir un acteur clé du commerce international responsable, où performance et durabilité vont de pair.",
+    "p4": "Nous nous engageons à promouvoir une logistique plus verte et à soutenir des relations commerciales équitables.",
+    "opt1": "Un accompagnement personnalisé à chaque étape",
+    "opt2": "Une expertise sur les marchés européens",
+    "opt3": "Une gestion rigoureuse des flux logistiques et douaniers",
+    "opt4": "Une communication fluide et réactive"
   },
   "services": {
     "title": "Nos services",
+    "subtitle": "Solutions complètes d’import/export et logistique.",
     "p1": "Solutions complètes d’importation, d’exportation, de logistique et d’entreposage adaptées aux entreprises européennes."
   },
   "services_list": {
-    "s1": "Importation & sourcing international",
-    "s2": "Exportation & distribution",
-    "s3": "Transport maritime & aérien",
-    "s4": "Dédouanement & conformité",
-    "s5": "Entreposage & gestion d’inventaire",
-    "s6": "Conseil en commerce international"
+    "s1": "Transport national et international",
+    "s1_content": "Acheminement rapide et sécurisé de vos marchandises vers toutes destinations.",
+    "s2": "Logistique sur mesure",
+    "s2_content": "Planification, gestion de flux, entreposage et distribution adaptés à vos besoins.",
+    "s3": "Suivi et traçabilité",
+    "s3_content": "Technologie embarquée pour une visibilité complète sur vos expéditions."
   },
   "contact": {
     "title": "Contactez‑nous",
+    "contact_info": "Coordonnées",
+    "description": "Une question, un projet ou une demande de partenariat ?\nNotre équipe est à votre écoute pour répondre à vos besoins et vous accompagner dans vos démarches.",
     "email": "contact@hasevgroup.be",
-    "address": "Rue Esseghem 116, 1090 Bruxelles, Belgique",
-    "phone": "Tél. : +32 477 65 01 53",
+    "address": "Addresse : Rue Esseghem 116, 1090 Bruxelles, Belgique",
+    "phone": "Tél. : ",
     "tva": "N° TVA : BE1027834071",
     "name_field": "Nom",
     "email_field": "Email",
@@ -40,7 +58,7 @@
     "email_send": "Envoyer",
     "email_sent": "✅ Message envoyé avec succès.",
     "email_sending_error": "❌ Une erreur est survenue, veuillez réessayer.",
-    "or_using_email": "Ou par email"
+    "or_using_email": "Email"
   },
   "legal": {
     "title": "Mentions légales",

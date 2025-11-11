@@ -58,7 +58,7 @@ export function LanguageSelector({ locale }: SelectLangProps) {
             aria-expanded={isOpen}
         >
             <span className={`fi fis fi-${selectedLanguage?.countryCode} inline-block w-6 h-4`} />
-            {selectedLanguage?.label}
+            <span className="text-[#1e61ca]">{selectedLanguage?.label} </span>
             <svg
                 className="-me-1 ms-2 h-5 w-5"
                 xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@ export function LanguageSelector({ locale }: SelectLangProps) {
                             role="menuitem"
                         >
                             <span className={`fi fis fi-${language.countryCode} inline-block w-6 h-4`} />
-                            <span className="truncate">{language.label}</span>
+                            <span className="truncate text-[#1e61ca]">{language.label}</span>
                         </button>
                     );
                 })}

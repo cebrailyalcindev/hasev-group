@@ -1,40 +1,77 @@
 {
   "nav": {
     "home": "Home",
-    "about": "Over",
+    "about": "Over ons",
     "services": "Diensten",
     "contact": "Contact",
-    "legal": "Juridische info"
+    "legal": "Wettelijke vermeldingen"
   },
   "hero": {
-    "title": "Uw import‑export partner in Brussel",
-    "subtitle": "Wij stroomlijnen wereldwijde toeleveringsketens voor snelheid, veiligheid en naleving.",
-    "cta": "Neem contact op"
+    "title": "Uw logistieke partner in België en internationaal",
+    "subtitle": "Bij Hasev Group zetten we onze logistieke expertise in om uw doelen te ondersteunen. Vanuit België verzorgen we nationaal en internationaal transport van uw goederen — snel, veilig en betrouwbaar.",
+    "subtitle_2": "Onze missie is eenvoudig: een complete logistieke oplossing bieden, aangepast aan uw behoeften en deadlines. Met een modern wagenpark, een ervaren team en geoptimaliseerd transportbeheer garanderen we nauwkeurige opvolging en veilige levering, overal in Europa en daarbuiten.",
+    "cta": "Neem contact op",
+    "why_us": "Waarom kiezen voor Hasev Group?",
+    "why_us_p1": "Snelle en flexibele service voor dringende transporten.",
+    "why_us_p2": "Een betrouwbaar en efficiënt logistiek netwerk in heel Europa.",
+    "why_us_p3": "Een constante toewijding aan kwaliteit, veiligheid en klanttevredenheid.",
+    "why_us_p4": "Bij Hasev Group is elke levering een belofte: professioneel, stipt en transparant."
   },
   "about": {
-    "title": "Over Hasev Group",
-    "p1": "Hasev Group ondersteunt al meer dan 10 jaar bedrijven bij internationale operaties. Wij bieden oplossingen op maat, van transport tot douaneafhandeling."
+    "title": "Wie zijn wij?",
+    "title_2": "Onze visie",
+    "title_3": "Onze engagementen",
+    "p1": "Hasev Group, opgericht in Brussel, is een import-exportbedrijf dat leveranciers, distributeurs en ondernemingen wereldwijd met elkaar verbindt.\nOnze missie is internationale handel eenvoudiger te maken via op maat gemaakte, transparante en efficiënte oplossingen.",
+    "p2": "Wij geloven dat succesvolle wereldhandel gebaseerd is op vertrouwen, nabijheid en kwalitatieve partnerschappen.",
+    "p3": "Een toonaangevende speler worden in verantwoorde internationale handel, waar prestaties en duurzaamheid hand in hand gaan.",
+    "p4": "Wij zetten ons in voor groenere logistiek en eerlijke handelsrelaties.",
+    "opt1": "Persoonlijke begeleiding in elke fase",
+    "opt2": "Expertise in Europese markten",
+    "opt3": "Nauwgezette beheersing van logistieke en douanestromen",
+    "opt4": "Vlotte en responsieve communicatie"
   },
   "services": {
     "title": "Onze diensten",
-    "p1": "Volledige import/export, logistiek en opslagoplossingen voor Europese bedrijven."
+    "subtitle": "Volledige oplossingen voor import, export en logistiek.",
+    "p1": "Complete oplossingen voor import, export, logistiek en opslag, aangepast aan Europese bedrijven."
   },
   "services_list": {
-    "s1": "Internationaal sourcen & import",
-    "s2": "Export & distributie",
-    "s3": "Zee- & luchtvracht",
-    "s4": "Douane & naleving",
-    "s5": "Opslag & voorraadbeheer",
-    "s6": "Advies internationaal zakendoen"
+    "s1": "Nationaal en internationaal transport",
+    "s1_content": "Snelle en veilige levering van uw goederen naar elke bestemming.",
+    "s2": "Logistiek op maat",
+    "s2_content": "Planning, stroombeheer, opslag en distributie aangepast aan uw behoeften.",
+    "s3": "Opvolging en traceerbaarheid",
+    "s3_content": "Ingebouwde technologie voor volledige zichtbaarheid van uw zendingen."
   },
   "contact": {
     "title": "Neem contact op",
-    "email": "hasevgroup@gmail.com",
-    "address": "Rue de l'Export 10, 1000 Brussel, België",
-    "phone": "+32 477 65 01 53"
+    "contact_info": "Contactgegevens",
+    "description": "Heeft u een vraag, een project of een samenwerkingsvoorstel?\nOns team staat klaar om u te helpen.",
+    "email": "contact@hasevgroup.be",
+    "address": "Adres: Rue Esseghem 116, 1090 Brussel, België",
+    "phone": "Tel.:",
+    "tva": "BTW-nummer: BE1027834071",
+    "name_field": "Naam",
+    "email_field": "E-mail",
+    "message_field": "Bericht",
+    "email_sending": "Bezig met verzenden...",
+    "email_send": "Verzenden",
+    "email_sent": "✅ Bericht succesvol verzonden.",
+    "email_sending_error": "❌ Er is een fout opgetreden, probeer opnieuw.",
+    "or_using_email": "E-mail"
   },
   "legal": {
-    "title": "Juridische info",
-    "p1": "Juridische informatie: bedrijfsnaam, registratienummer, vestigingsadres en contactgegevens."
+    "title": "Wettelijke vermeldingen",
+    "p1": "Wettelijke informatie van het bedrijf: handelsnaam, ondernemingsnummer, maatschappelijke zetel en contactgegevens."
+  },
+  "footer": {
+    "rights": "Hasev Group — Alle rechten voorbehouden.",
+    "phone": "+32 477 65 01 53"
+  },
+  "header": {
+    "home": "Home",
+    "about": "Over ons",
+    "services": "Diensten",
+    "contact": "Contact"
   }
 }
