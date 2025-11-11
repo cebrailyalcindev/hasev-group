@@ -1,4 +1,4 @@
-const baseUrl = 'https://hasev-group.vercel.app';
+const baseUrl = 'https://hasev-group.be';
 
 export const locales = ['fr', 'en', 'nl', 'de'] as const;
 export type Locale = typeof locales[number];

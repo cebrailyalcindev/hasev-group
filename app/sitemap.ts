@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next';
 import { locales } from '@/../../seo.config';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://hasev-group.vercel.app';
-  const routes = ['', '/about', '/contact', '/legal', '/services'];
+  const baseUrl = 'https://hasev-group.be';
+  const routes = ['', '/about', '/contact'];
 
   return locales.flatMap((locale) =>
     routes.map((route) => ({

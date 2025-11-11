@@ -48,10 +48,10 @@ export default async function LocaleLayout({ children, params }: { children: Rea
                   key={lng}
                   rel="alternate"
                   hrefLang={lng}
-                  href={`https://hasev-group.vercel.app/${lng}`}
+                  href={`https://hasev-group.be/${lng}`}
                 />
               ))}
-              <link rel="alternate" hrefLang="x-default" href="https://hasev-group.vercel.app/fr" />
+              <link rel="alternate" hrefLang="x-default" href="https://hasev-group.be/fr" />
             </Head>
           <body className="min-h-screen flex flex-col bg-white text-gray-800">
                 <Header locale={locale} />
