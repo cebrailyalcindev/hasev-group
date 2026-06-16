@@ -11,6 +11,7 @@
     "subtitle": "At Hasev Group, we put our logistics expertise at the service of your ambitions. Based in Belgium, we ensure fast, reliable national and international transport of your goods.",
     "subtitle_2": "Our mission is simple: to provide a complete logistics solution tailored to your needs and deadlines. With a modern fleet, an experienced team and optimized transport management, we guarantee accurate tracking and safe delivery across Europe and beyond.",
     "cta": "Contact us",
+    "promise": "Our promise",
     "why_us": "Why choose Hasev Group?",
     "why_us_p1": "Responsiveness and flexibility to handle all your urgent needs.",
     "why_us_p2": "A reliable and efficient logistics network throughout Europe.",
@@ -18,6 +19,7 @@
     "why_us_p4": "At Hasev Group, every delivery is a kept promise: professional, punctual and transparent service."
   },
   "about": {
+    "about": "About Us",
     "title": "Who are we?",
     "title_2": "Our vision",
     "title_3": "Our commitments",
@@ -28,11 +30,14 @@
     "opt1": "Personalized support at every step",
     "opt2": "Expertise in European markets",
     "opt3": "Rigorous management of logistics and customs flows",
-    "opt4": "Smooth and responsive communication"
+    "opt4": "Smooth and responsive communication",
+    "our_story": "Our Story",
+    "vision": "Vision"
   },
   "services": {
     "title": "Our services",
     "subtitle": "Comprehensive import/export and logistics solutions.",
+    "learn_more": "Learn More",
     "p1": "Complete solutions for import, export, logistics and warehousing tailored to European businesses."
   },
   "services_list": {
@@ -46,6 +51,7 @@
   "contact": {
     "title": "Contact us",
     "contact_info": "Contact information",
+    "contact": "Contact",
     "description": "Do you have a question, project or partnership request?\nOur team is ready to listen and assist you with your needs.",
     "email": "contact@hasevgroup.be",
     "address": "Address: Rue Esseghem 116, 1090 Brussels, Belgium",
@@ -58,7 +64,8 @@
     "email_send": "Send",
     "email_sent": "✅ Message sent successfully.",
     "email_sending_error": "❌ An error occurred, please try again.",
-    "or_using_email": "Email"
+    "or_using_email": "Email",
+    "work_together": "Let's work together"
   },
   "legal": {
     "title": "Legal notice",
@@ -66,7 +73,8 @@
   },
   "footer": {
     "rights": "Hasev Group — All rights reserved.",
-    "phone": "+32 477 65 01 53"
+    "phone": "+32 477 65 01 53",
+    "navigation": "Navigation"
   },
   "header": {
     "home": "Home",

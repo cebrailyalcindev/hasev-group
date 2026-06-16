@@ -1,51 +1,129 @@
-'use client';
-import { motion } from 'framer-motion';
-import { Phone, MapPin, Mail } from 'lucide-react';
-import fr from '../locales/fr/common.json';
-import en from '../locales/en/common.json';
-import nl from '../locales/nl/common.json';
-import de from '../locales/de/common.json';
+import Link from "next/link";
+import Image from "next/image";
 
-const translations: Record<string, any> = { fr, en, nl, de };
+interface FooterProps {
+  locale: string;
+  dict?: Record<string, any>;
+}
 
-export default function Footer({ locale }: { locale: string }) {
-  const year = new Date().getFullYear();
+export default function Footer({ locale, dict = {} }: FooterProps) {
+  const nav     = dict?.nav     ?? {};
+  const footer  = dict?.footer  ?? {};
+  const contact = dict?.contact ?? {};
 
-  const t = translations[locale] || fr;
-  const mail = t.contact?.email || 'hasevgroup@gmail.com';
+  const phone   = footer?.phone ?? contact?.phone;
+  const email   = contact?.email;
+  const address = contact?.address;
+
+  const navLinks = [
+    { href: `/${locale}`,          label: nav.home     ?? "Accueil"          },
+    { href: `/${locale}/about`,    label: nav.about    ?? "À propos"         },
+    // { href: `/${locale}/services`, label: nav.services ?? "Services"         },
+    { href: `/${locale}/contact`,  label: nav.contact  ?? "Contact"          },
+    { href: `/${locale}/legal`,    label: nav.legal    ?? "Mentions légales" },
+  ];
 
   return (
-    <motion.footer
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.6 }}
-      className="bg-[#0d3068] text-white mt-12 b-0"
-    >
-      <div className="max-w-6xl mx-auto px-4 py-10 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-        <div>
-          <img src="/logo_white.png" alt="Hasev Group" className="h-10 mb-3" />
-          <div className="flex flex-col gap-2">
-            <div className="flex gap-2 items-center">
-                <MapPin/>
-                <p className="text-sm opacity-80">{t.contact?.address}</p>
-            </div>
-            <div className="flex gap-2 items-center">
-                <Phone/>
-                <a href={`tel:${t.footer?.phone}`} className="underline">{t.footer?.phone}</a>
-            </div>
-            <div className="flex gap-2 items-center">
-                <Mail/>
-                <a href={`mailto:${mail}`} className="text-sm opacity-80 underline">{mail}</a>
-            </div>
-            <p className="text-sm opacity-80">{t.contact?.tva}</p>
+    <footer className="bg-[#0A1F6B] text-white">
+      {/* Royal blue top border */}
+      <div className="h-[3px] bg-[#1A4FBF]" />
+
+      <div className="max-w-7xl mx-auto px-6 sm:px-10 py-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+          {/* ── Brand ── */}
+          <div className="md:col-span-1">
+            <Link href={`/${locale}`} className="inline-block mb-6">
+              <Image
+                src="/logo.png"
+                alt="Hasev Group"
+                width={130}
+                height={52}
+                className="object-contain h-12 w-auto"
+              />
+            </Link>
+            {address && (
+              <p className="text-white/45 text-sm leading-relaxed mb-3">
+                {address.replace(/^Addresse\s*:\s*/i, "")}
+              </p>
+            )}
+            {phone && (
+              <a
+                href={`tel:${phone.replace(/\s/g, "")}`}
+                className="block text-white/45 text-sm hover:text-[#3A7FE8] transition-colors mb-1.5"
+              >
+                {phone}
+              </a>
+            )}
+            {email && (
+              <a
+                href={`mailto:${email}`}
+                className="block text-white/45 text-sm hover:text-[#3A7FE8] transition-colors"
+              >
+                {email}
+              </a>
+            )}
+          </div>
+
+          {/* ── Navigation ── */}
+          <div>
+            <h4 className="text-[10px] font-bold tracking-[0.25em] uppercase text-white/35 mb-6">
+              {footer.navigation}
+            </h4>
+            <ul className="space-y-3">
+              {navLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-white/55 text-sm hover:text-[#3A7FE8] transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* ── Contact CTA ── */}
+          <div>
+            <h4 className="text-[10px] font-bold tracking-[0.25em] uppercase text-white/35 mb-6">
+              {contact.contact}
+            </h4>
+            <Link
+              href={`/${locale}/contact`}
+              className="inline-flex items-center gap-2 px-6 py-3 border border-[#1A4FBF] text-[#3A7FE8] text-xs font-bold tracking-[0.2em] uppercase hover:bg-[#1A4FBF] hover:text-white transition-colors duration-200"
+            >
+              {nav.contact ?? "Nous contacter"}
+              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+            {contact?.tva && (
+              <p className="mt-8 text-white/30 text-xs">{contact.tva}</p>
+            )}
+          </div>
+        </div>
+
+        {/* ── Bottom bar ── */}
+        <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row justify-between items-center gap-2">
+          <p className="text-white/25 text-xs">
+            {footer?.rights ?? `© ${new Date().getFullYear()} Hasev Group. Tous droits réservés.`}
+          </p>
+          <div className="flex gap-4">
+            {(["fr", "en", "nl", "de"] as const).map((loc) => (
+              <Link
+                key={loc}
+                href={`/${loc}`}
+                className={`text-[10px] uppercase tracking-widest font-semibold transition-colors ${
+                  loc === locale ? "text-[#3A7FE8]" : "text-white/25 hover:text-white"
+                }`}
+              >
+                {loc}
+              </Link>
+            ))}
           </div>
         </div>
       </div>
-
-      <div className="bg-[#0d3068]/80 text-center text-xs py-3 border-t border-white/10">
-        © {year} {t.footer?.rights}
-      </div>
-    </motion.footer>
+    </footer>
   );
 }
