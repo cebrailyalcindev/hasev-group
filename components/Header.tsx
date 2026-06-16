@@ -1,152 +1,163 @@
-'use client';
-import Link from 'next/link';
-import { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { LanguageSelector } from "./LanguageSelector";
-import fr from '../locales/fr/common.json';
-import en from '../locales/en/common.json';
-import nl from '../locales/nl/common.json';
-import de from '../locales/de/common.json';
+"use client";
 
-const translations: Record<string, any> = { fr, en, nl, de };
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+import { usePathname } from "next/navigation";
 
-const NavLink = ({ href, children, onClick }: { href: string; children: React.ReactNode; onClick: () => void }) => (
-  <Link
-    href={href}
-    onClick={onClick}
-    className="block px-4 py-2 hover:bg-gray-100 rounded transition-colors duration-150"
-  >
-    {children}
-  </Link>
-);
+const LOCALES = ["fr", "en", "nl", "de"] as const;
 
-export default function Header({ locale }: { locale: string }) {
-  const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [isOpen, setIsOpen] = useState<boolean>(true);
-  const t = translations[locale] || fr;
+interface HeaderProps {
+  locale: string;
+  dict?: Record<string, any>;
+}
 
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener('scroll', onScroll);
-    return () => window.removeEventListener('scroll', onScroll);
-  }, []);
+export default function Header({ locale, dict = {} }: HeaderProps) {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
-  const LANGUAGE_SELECTOR_ID = 'language-selector';
-  useEffect(() => {
-      const handleWindowClick = (event: any) => {
-          const target = event.target.closest('button');
-          if (target && target.id === LANGUAGE_SELECTOR_ID) {
-              return;
-          }
-          setIsOpen(false);
-      }
-      window.addEventListener('click', handleWindowClick)
-      return () => {
-          window.removeEventListener('click', handleWindowClick);
-      }
-  }, []);
+  const nav     = dict?.nav     ?? {};
+  const footer  = dict?.footer  ?? {};
+  const contact = dict?.contact ?? {};
 
-  const handleLanguageChange = (selectedLanguage: string) => {
-    const parts = window.location.pathname.split('/').filter(Boolean);
-    if (parts.length === 0) window.location.pathname = '/' + selectedLanguage;
-    else {
-      parts[0] = selectedLanguage;
-      window.location.pathname = '/' + parts.join('/');
-    }
-  };
+  const phone = footer?.phone ?? contact?.phone;
+  const email = contact?.email;
+
+  const navLinks = [
+    { href: `/${locale}`,          label: nav.home     ?? "Accueil"  },
+    { href: `/${locale}/about`,    label: nav.about    ?? "À propos" },
+    // { href: `/${locale}/services`, label: nav.services ?? "Services" },
+    { href: `/${locale}/contact`,  label: nav.contact  ?? "Contact"  },
+  ];
+
+  const isActive = (href: string) =>
+    href === `/${locale}`
+      ? pathname === href
+      : pathname.startsWith(href);
 
   return (
-    <motion.header
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      className={`fixed w-full top-0 z-50 transition-all ${
-        scrolled ? 'bg-white/90 shadow backdrop-blur' : 'bg-white/70 shadow backdrop-blur-sm'
-      }`}
-    >
-      <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-        <Link href={`/${locale}`} className="flex items-center gap-3">
-          <img src="/logo.png" alt="Hasev Group" className="h-[6em] object-contain" />
-        </Link>
+    <header className="w-full sticky top-0 z-50 shadow-md">
 
-        {/* Navigation Desktop */}
-        <nav className="text-[#1e61ca] relative hidden md:flex gap-6 items-center">
-          <Link href={`/${locale}`} className="text-sm font-medium hover:text-accent">{t.header?.home}</Link>
-          <Link href={`/${locale}/about`} className="whitespace-nowrap text-sm font-medium hover:text-accent">{t.header?.about}</Link>
-          <Link href={`/${locale}/contact`} className="text-sm font-medium hover:text-accent">{t.header?.contact}</Link>
-          <LanguageSelector locale={locale} />
-        </nav>
-
-        {/* Navigation Mobile */}
-        <div className="md:hidden flex items-center gap-2 relative">
-          <LanguageSelector locale={locale} />
-          <button
-            aria-label="Open menu"
-            onClick={() => setOpen(true)}
-            className="p-2 rounded border bg-white/70 hover:bg-gray-100 transition"
+      {/* ── Top contact bar ── */}
+      <div className="bg-[#0A1F6B] text-white/70 text-[11px] py-2 px-6 sm:px-10 flex justify-end items-center gap-5 tracking-wide">
+        {phone && (
+          <a
+            href={`tel:${phone.replace(/\s/g, "")}`}
+            className="hover:text-white transition-colors flex items-center gap-1.5"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M4 6h16M4 12h16M4 18h16"
-                stroke="#0b2545"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
+            <svg className="w-3 h-3 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.773-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
             </svg>
-          </button>
+            {phone}
+          </a>
+        )}
+        {email && (
+          <a
+            href={`mailto:${email}`}
+            className="hidden sm:flex hover:text-white transition-colors items-center gap-1.5"
+          >
+            <svg className="w-3 h-3 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+            </svg>
+            {email}
+          </a>
+        )}
+
+        {/* Language switcher */}
+        <div className="flex items-center gap-2 border-l border-white/15 pl-4 ml-1">
+          {LOCALES.map((loc) => (
+            <Link
+              key={loc}
+              href={pathname.replace(`/${locale}`, `/${loc}`)}
+              className={`text-[10px] font-bold tracking-[0.15em] uppercase transition-colors ${
+                loc === locale ? "text-[#3A7FE8]" : "text-white/40 hover:text-white"
+              }`}
+            >
+              {loc}
+            </Link>
+          ))}
         </div>
       </div>
 
-      {/* Mobile Menu */}
-      <AnimatePresence>
-        {open && (
-          <>
-            {/* Fond sombre flou derrière le menu */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.6 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setOpen(false)}
-              className="fixed inset-0 bg-black/70 backdrop-blur-sm z-40"
+      {/* ── Main nav ── */}
+      <nav className="bg-white border-b border-gray-100">
+        <div className="max-w-7xl mx-auto px-6 sm:px-10 flex items-center justify-between h-16">
+
+          {/* Logo */}
+          <Link href={`/${locale}`} className="shrink-0">
+            <Image
+              src="/logo.png"
+              alt="Hasev Group"
+              width={120}
+              height={48}
+              className="object-contain h-14 w-auto"
+              priority
             />
+          </Link>
 
-            {/* Panneau du menu latéral */}
-            <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-              className="fixed right-0 top-0 z-50 h-full w-full bg-white shadow-2xl flex flex-col"
+          {/* Desktop links */}
+          <div className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`relative text-[11px] font-semibold tracking-[0.18em] uppercase transition-colors group ${
+                  isActive(link.href) ? "text-[#0A1F6B]" : "text-gray-400 hover:text-[#0A1F6B]"
+                }`}
+              >
+                {link.label}
+                <span
+                  className={`absolute -bottom-1 left-0 h-[2px] bg-[#1A4FBF] transition-all duration-250 ${
+                    isActive(link.href) ? "w-full" : "w-0 group-hover:w-full"
+                  }`}
+                />
+              </Link>
+            ))}
+
+            <Link
+              href={`/${locale}/contact`}
+              className="ml-2 px-5 py-2 bg-[#0A1F6B] text-white text-[10px] font-bold tracking-[0.2em] uppercase hover:bg-[#1A4FBF] transition-colors duration-200"
             >
-              <div className="px-4 py-4 flex items-center justify-between border-b bg-white">
-                <span className="text-lg font-semibold text-gray-800">Menu</span>
-                <button
-                  onClick={() => setOpen(false)}
-                  aria-label="Close"
-                  className="p-2 rounded hover:bg-gray-100"
-                >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                    <path
-                      d="M6 18L18 6M6 6l12 12"
-                      stroke="#0b2545"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
+              {nav.contact ?? "Contact"}
+            </Link>
+          </div>
 
-              <nav className="bg-white px-4 py-5 space-y-2 text-[#1e61ca] border-b">
-                <NavLink onClick={() => setOpen(false)} href={`/${locale}`}>{t.header?.home}</NavLink>
-                <NavLink onClick={() => setOpen(false)} href={`/${locale}/about`}>{t.header?.about}</NavLink>
-                <NavLink onClick={() => setOpen(false)} href={`/${locale}/contact`}>{t.header?.contact}</NavLink>
-              </nav>
-            </motion.div>
-          </>
+          {/* Burger */}
+          <button
+            className="md:hidden flex flex-col gap-[5px] p-2"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span className={`block w-6 h-[2px] bg-[#0A1F6B] transition-transform duration-200 origin-center ${menuOpen ? "rotate-45 translate-y-[7px]" : ""}`} />
+            <span className={`block w-6 h-[2px] bg-[#0A1F6B] transition-opacity duration-200 ${menuOpen ? "opacity-0" : ""}`} />
+            <span className={`block w-6 h-[2px] bg-[#0A1F6B] transition-transform duration-200 origin-center ${menuOpen ? "-rotate-45 -translate-y-[7px]" : ""}`} />
+          </button>
+        </div>
+
+        {/* Mobile drawer */}
+        {menuOpen && (
+          <div className="md:hidden border-t border-gray-100 bg-white">
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setMenuOpen(false)}
+                className={`flex items-center px-6 py-3.5 text-[11px] font-semibold tracking-[0.18em] uppercase border-b border-gray-50 transition-colors ${
+                  isActive(link.href)
+                    ? "text-[#0A1F6B] bg-blue-50"
+                    : "text-gray-400 hover:text-[#0A1F6B] hover:bg-blue-50"
+                }`}
+              >
+                {isActive(link.href) && (
+                  <span className="w-1 h-4 bg-[#1A4FBF] mr-3 shrink-0" />
+                )}
+                {link.label}
+              </Link>
+            ))}
+          </div>
         )}
-      </AnimatePresence>
-    </motion.header>
+      </nav>
+    </header>
   );
 }

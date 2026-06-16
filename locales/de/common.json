@@ -11,6 +11,7 @@
     "subtitle": "Bei Hasev Group stellen wir unsere Logistikkompetenz in den Dienst Ihrer Ziele. Mit Sitz in Belgien gewährleisten wir den nationalen und internationalen Transport Ihrer Waren – schnell, sicher und zuverlässig.",
     "subtitle_2": "Unsere Mission ist einfach: eine vollständige Logistiklösung zu bieten, die Ihren Bedürfnissen und Fristen entspricht. Mit einer modernen Fahrzeugflotte, einem erfahrenen Team und optimiertem Transportmanagement garantieren wir präzises Tracking und sichere Lieferung in ganz Europa und darüber hinaus.",
     "cta": "Kontaktieren Sie uns",
+    "promise": "Unser Versprechen",
     "why_us": "Warum Hasev Group?",
     "why_us_p1": "Reaktionsfähigkeit und Flexibilität für dringende Anforderungen.",
     "why_us_p2": "Ein zuverlässiges und leistungsstarkes Logistiknetz in ganz Europa.",
@@ -18,6 +19,7 @@
     "why_us_p4": "Bei Hasev Group ist jede Lieferung ein gehaltenes Versprechen: professionell, pünktlich und transparent."
   },
   "about": {
+    "about": "Über Uns",
     "title": "Wer sind wir?",
     "title_2": "Unsere Vision",
     "title_3": "Unsere Verpflichtungen",
@@ -28,11 +30,14 @@
     "opt1": "Persönliche Betreuung in jeder Phase",
     "opt2": "Fachwissen über europäische Märkte",
     "opt3": "Sorgfältiges Management von Logistik- und Zollprozessen",
-    "opt4": "Reibungslose und reaktionsschnelle Kommunikation"
+    "opt4": "Reibungslose und reaktionsschnelle Kommunikation",
+    "our_story": "Unsere Geschichte",
+    "vision": "Vision"
   },
   "services": {
     "title": "Unsere Leistungen",
     "subtitle": "Umfassende Lösungen für Im- und Export sowie Logistik.",
+    "learn_more": "Mehr erfahren",
     "p1": "Komplette Lösungen für Import, Export, Logistik und Lagerung für europäische Unternehmen."
   },
   "services_list": {
@@ -46,6 +51,7 @@
   "contact": {
     "title": "Kontaktieren Sie uns",
     "contact_info": "Kontaktdaten",
+    "contact": "Kontakt",
     "description": "Haben Sie eine Frage, ein Projekt oder ein Partnerschaftsanliegen?\nUnser Team steht Ihnen zur Verfügung, um Sie zu unterstützen.",
     "email": "contact@hasevgroup.be",
     "address": "Adresse: Rue Esseghem 116, 1090 Brüssel, Belgien",
@@ -58,7 +64,8 @@
     "email_send": "Senden",
     "email_sent": "✅ Nachricht erfolgreich gesendet.",
     "email_sending_error": "❌ Ein Fehler ist aufgetreten, bitte versuchen Sie es erneut.",
-    "or_using_email": "E-Mail"
+    "or_using_email": "E-Mail",
+    "work_together": "Lass uns zusammenarbeiten"
   },
   "legal": {
     "title": "Rechtliche Hinweise",
@@ -66,7 +73,8 @@
   },
   "footer": {
     "rights": "Hasev Group — Alle Rechte vorbehalten.",
-    "phone": "+32 477 65 01 53"
+    "phone": "+32 477 65 01 53",
+    "navigation": "Navigation"
   },
   "header": {
     "home": "Startseite",

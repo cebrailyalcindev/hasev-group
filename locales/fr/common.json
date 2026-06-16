@@ -11,6 +11,7 @@
     "subtitle": "Chez Hasev Group, nous mettons notre expertise logistique au service de vos ambitions. Basés en Belgique, nous assurons le transport national et international de vos marchandises avec rigueur, rapidité et fiabilité.",
     "subtitle_2": "Notre mission est simple : vous offrir une solution logistique complète, adaptée à vos besoins et à vos délais. Grâce à une flotte moderne, une équipe expérimentée et une gestion de transport optimisée, nous garantissons un suivi précis et une livraison en toute sécurité, partout en Europe et au-delà.",
     "cta": "Contactez‑nous",
+    "promise": "Notre promesse",
     "why_us": "Pourquoi choisir Hasev Group ?",
     "why_us_p1": "Réactivité et flexibilité pour répondre à toutes vos urgences.",
     "why_us_p2": "Un réseau logistique fiable et performant à travers l’Europe.",
@@ -18,6 +19,7 @@
     "why_us_p4": "Chez Hasev Group, chaque trajet est une promesse tenue : celle d’un service professionnel, ponctuel et transparent."
   },
   "about": {
+    "about": "À propos",
     "title": "Qui sommes-nous ?",
     "title_2": "Notre vision",
     "title_3": "Nos engagements",
@@ -28,11 +30,14 @@
     "opt1": "Un accompagnement personnalisé à chaque étape",
     "opt2": "Une expertise sur les marchés européens",
     "opt3": "Une gestion rigoureuse des flux logistiques et douaniers",
-    "opt4": "Une communication fluide et réactive"
+    "opt4": "Une communication fluide et réactive",
+    "our_story": "Notre histoire",
+    "vision": "Vision"
   },
   "services": {
     "title": "Nos services",
     "subtitle": "Solutions complètes d’import/export et logistique.",
+    "learn_more": "En savoir plus",
     "p1": "Solutions complètes d’importation, d’exportation, de logistique et d’entreposage adaptées aux entreprises européennes."
   },
   "services_list": {
@@ -46,6 +51,7 @@
   "contact": {
     "title": "Contactez‑nous",
     "contact_info": "Coordonnées",
+    "contact": "Contact",
     "description": "Une question, un projet ou une demande de partenariat ?\nNotre équipe est à votre écoute pour répondre à vos besoins et vous accompagner dans vos démarches.",
     "email": "contact@hasevgroup.be",
     "address": "Addresse : Rue Esseghem 116, 1090 Bruxelles, Belgique",
@@ -66,7 +72,8 @@
   },
   "footer": {
     "rights": "Hasev Group — Tous droits réservés.",
-    "phone": "+32 477 65 01 53"
+    "phone": "+32 477 65 01 53",
+    "navigation": "Navigation"
   },
   "header": {
     "home": "Accueil",
