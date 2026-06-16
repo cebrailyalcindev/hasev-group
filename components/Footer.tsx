@@ -7,27 +7,26 @@ interface FooterProps {
 }
 
 export default function Footer({ locale, dict = {} }: FooterProps) {
-  const nav     = dict?.nav     ?? {};
-  const footer  = dict?.footer  ?? {};
+  const nav = dict?.nav ?? {};
+  const footer = dict?.footer ?? {};
   const contact = dict?.contact ?? {};
 
-  const phone   = footer?.phone ?? contact?.phone;
-  const email   = contact?.email;
+  const phone = footer?.phone ?? contact?.phone;
+  const email = contact?.email;
   const address = contact?.address;
 
   const navLinks = [
-    { href: `/${locale}`,          label: nav.home     ?? "Accueil"          },
-    { href: `/${locale}/about`,    label: nav.about    ?? "À propos"         },
+    { href: `/${locale}`, label: nav.home ?? "Accueil" },
+    { href: `/${locale}/about`, label: nav.about ?? "À propos" },
     // { href: `/${locale}/services`, label: nav.services ?? "Services"         },
-    { href: `/${locale}/contact`,  label: nav.contact  ?? "Contact"          },
-    { href: `/${locale}/legal`,    label: nav.legal    ?? "Mentions légales" },
+    { href: `/${locale}/contact`, label: nav.contact ?? "Contact" },
+    { href: `/${locale}/legal`, label: nav.legal ?? "Mentions légales" },
   ];
 
   return (
-    <footer className="bg-[#0A1F6B] text-white">
+    <footer className="bg-white text-[#0A1F6B] border-t border-gray-100">
       {/* Royal blue top border */}
-      <div className="h-[3px] bg-[#1A4FBF]" />
-
+      <div className="h-[3px]" />
       <div className="max-w-7xl mx-auto px-6 sm:px-10 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
@@ -43,14 +42,14 @@ export default function Footer({ locale, dict = {} }: FooterProps) {
               />
             </Link>
             {address && (
-              <p className="text-white/45 text-sm leading-relaxed mb-3">
+              <p className="text-gray-500 text-sm leading-relaxed mb-3">
                 {address.replace(/^Addresse\s*:\s*/i, "")}
               </p>
             )}
             {phone && (
               <a
                 href={`tel:${phone.replace(/\s/g, "")}`}
-                className="block text-white/45 text-sm hover:text-[#3A7FE8] transition-colors mb-1.5"
+                className="block text-gray-500 text-sm hover:text-[#1A4FBF] transition-colors mb-1.5"
               >
                 {phone}
               </a>
@@ -58,7 +57,7 @@ export default function Footer({ locale, dict = {} }: FooterProps) {
             {email && (
               <a
                 href={`mailto:${email}`}
-                className="block text-white/45 text-sm hover:text-[#3A7FE8] transition-colors"
+                className="block text-gray-500 text-sm hover:text-[#1A4FBF] transition-colors"
               >
                 {email}
               </a>
@@ -67,7 +66,7 @@ export default function Footer({ locale, dict = {} }: FooterProps) {
 
           {/* ── Navigation ── */}
           <div>
-            <h4 className="text-[10px] font-bold tracking-[0.25em] uppercase text-white/35 mb-6">
+            <h4 className="text-[10px] font-bold tracking-[0.25em] uppercase text-gray-400 mb-6">
               {footer.navigation}
             </h4>
             <ul className="space-y-3">
@@ -75,7 +74,7 @@ export default function Footer({ locale, dict = {} }: FooterProps) {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-white/55 text-sm hover:text-[#3A7FE8] transition-colors"
+                    className="text-gray-500 text-sm hover:text-[#1A4FBF] transition-colors"
                   >
                     {link.label}
                   </Link>
@@ -86,7 +85,7 @@ export default function Footer({ locale, dict = {} }: FooterProps) {
 
           {/* ── Contact CTA ── */}
           <div>
-            <h4 className="text-[10px] font-bold tracking-[0.25em] uppercase text-white/35 mb-6">
+            <h4 className="text-[10px] font-bold tracking-[0.25em] uppercase text-gray-400 mb-6">
               {contact.contact}
             </h4>
             <Link
@@ -99,7 +98,7 @@ export default function Footer({ locale, dict = {} }: FooterProps) {
               </svg>
             </Link>
             {contact?.tva && (
-              <p className="mt-8 text-white/30 text-xs">{contact.tva}</p>
+              <p className="mt-8 text-gray-400 text-xs">{contact.tva}</p>
             )}
           </div>
         </div>
@@ -114,9 +113,8 @@ export default function Footer({ locale, dict = {} }: FooterProps) {
               <Link
                 key={loc}
                 href={`/${loc}`}
-                className={`text-[10px] uppercase tracking-widest font-semibold transition-colors ${
-                  loc === locale ? "text-[#3A7FE8]" : "text-white/25 hover:text-white"
-                }`}
+                className={`text-[10px] uppercase tracking-widest font-semibold transition-colors ${loc === locale ? "text-[#1A4FBF]" : "text-gray-300 hover:text-[#0A1F6B]"
+                  }`}
               >
                 {loc}
               </Link>

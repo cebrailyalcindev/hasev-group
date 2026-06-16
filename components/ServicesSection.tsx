@@ -10,7 +10,7 @@ export default function ServicesSection({ locale, dict = {} }: ServicesSectionPr
   const sl = dict?.services_list ?? {};
 
   const items = [
-    { num: "01", img: "/s1.png", title: sl.s1 ?? "", desc: sl.s1_content ?? "" },
+    { num: "01", img: "/s1.jpg", title: sl.s1 ?? "", desc: sl.s1_content ?? "" },
     { num: "02", img: "/s2.jpeg", title: sl.s2 ?? "", desc: sl.s2_content ?? "" },
     { num: "03", img: "/s3.png", title: sl.s3 ?? "", desc: sl.s3_content ?? "" },
   ];
